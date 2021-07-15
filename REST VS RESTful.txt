@@ -1,0 +1,23 @@
+REST เป็นกระบวนทางสถาปัตยกรรม หรือ architectural paradigm ที่ใช้ประโยชน์จากเทคโนโลยี Web protocol เพื่อใช้ในการสร้าง Web Service.
+Architectural properties ข้อกำหนดของ REST architectural style ทั้ง 7 ประกอบไปด้วย
+- Performance 	ประสิทธิภาพในการโต้ตอบ
+- Scalability 		มีความสามารถในการปรับขยายได้ทำให้สามารถรองรับส่วนประกอบจำนวนมาก
+- Simplicity 		ความเรียบง่ายของอินเตอร์เฟซที่เหมือนกัน
+- Modifiability 	ความสามารถในการปรับเปลี่ยนส่วนประกอบเพื่อตอบสนองความต้องการที่เปลี่ยนแปลง (แม้ในขณะที่แอปพลิเคชันทำงานอยู่)
+- Visibility 			การมองเห็นการสื่อสารระหว่าง Component ผ่าน Service agents
+- Portability 		ง่ายต่อการโยกย้ายในส่วนของ Program และ Data
+- Reliability 		ความน่าเชื่อถือในการต้านทานความล้มเหลวในระบบ
+RESTful เป็นการใช้ หรืออ้างถึงสถาปัตยกรรม หรือ using that paradigm
+Architectural constraints of RESTful API
+6 ข้อกำหนดของ RESTful API ซึ่งถือเป็นสิ่งที่สำคัญในการสร้าง RESTful API ตามมาตรฐานซึ่งทำให้ง่ายต่อการพัฒนา และทำให้เป็นที่ยอมรับ (หากไม่ทำตามให้ครบทั้ง 6 ข้อจะไม่ถือว่าเป็น RESTful API ยกเว้น optional)
+- Client-server architecture		Client ไม่จำเป็นต้องรู้อะไรเกี่ยวกับ Business logic ภายใน ไม่มีหน้าที่เกี่ยวกับการจัดเก็บข้อมูล ส่วน Server มีหน้าที่เก็บ Resource และไม่จำเป็นต้องรู้อะไรเกี่ยวกับ UI Frontend หรือสถานะของผู้เรียก
+- Statelessness							ส่ง Request รับ Response จาก Server แล้วเลิก
+- Cacheability								สามารถ cache response ได้ การ Response จะต้องสามารถกำหนดได้ว่าจะ Cache หรือไม่ เพื่อป้องกันไม่ให้ User หรือ Client ได้รับข้อมูลเก่า หรือท่านสามารถดูเพิ่มเติมเรื่อง idempotent ได้ที่นี่
+- Layered system						ปกติ Client ไม่รู้ว่าที่ทำการเชื่อมต่อนั้น ได้เชื่อมต่อโดยตรงกับ Server ปลายทาง หรือไปยังตัวกลางอื่น ๆ ระหว่างทาง, Server ตัวกลางควรสามารถปรับปรุงความสามารถในการขยายระบบได้ โดยการใช้งานการทำ Load balance
+- Code on demand (optional)	Server สามารถขยายได้ชั่วคราว หรือปรับแต่งการทำงานของไคลเอนต์ได้ ตัวอย่างเช่น ทำ client-side scripts ใน JavaScript
+- Uniform interface						ถือเป็นข้อสำคัญจะที่แยกระหว่าง REST API และ Non-REST API มันแสดงให้เห็นถึงวิธีการที่จะคุยกับ Server โดยไม่คำนึงถึงประเภทของอุปกรณ์ หรือประเภทของ application
+													ได้แยกออกไปอีก 4 อย่าง
+														1. Resource-Based: เช่น API/users
+														2. Manipulation of Resources Through Representations: เช่น User get user_id หรือ Request list of users แล้วทำการ Delete หรือ Modify user
+														3. Self-descriptive Messages: แต่ละ Message มีข้อมูลเพียงพอที่จะนำมาอธิบายวิธีการ Process message เพื่อให้ Server ทำการวิเคราะห์ได้ง่าย
+														4. Hypermedia as the Engine of Application State (HATEOAS): จำเป็นต้องมี Links สำหรับทุก ๆ Response เพื่อให้ Client สามารถค้นหาได้ง่าย
