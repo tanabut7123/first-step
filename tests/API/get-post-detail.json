@@ -1,0 +1,38 @@
+{
+	"variables": [],
+	"info": {
+		"name": "get-post-detail",
+		"_postman_id": "fce25a53-b948-6388-46d6-a22fe1558455",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GETposts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"GET posts 1 userId is 1\"] = jsonData.userId === 1;",
+							"tests[\"GET posts 1 title is sunt aut facere repellat provident occaecati excepturi optio reprehenderit\"] = jsonData.title === \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\";",
+							"tests[\"GET posts 1 body is quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"] = jsonData.body === \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://jsonplaceholder.typicode.com/posts/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
