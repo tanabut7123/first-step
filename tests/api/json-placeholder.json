@@ -1,0 +1,41 @@
+{
+	"variables": [],
+	"info": {
+		"name": "json-placeholder",
+		"_postman_id": "b8b220e9-6e16-5156-6e2e-12646f8d6596",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var statusCode = 200;",
+							"var postsSize = 100;",
+							"",
+							"tests[\"Status code is \" + statusCode] = responseCode.code === statusCode;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"GET posts data length should be \" + postsSize + \" and actual is \"+jsonData.length] = jsonData.length === postsSize;",
+							"tests[\"GET posts userId in first data shound be 1 and actual is \"+ jsonData[0].userId] = jsonData[0].userId === 1;",
+							"tests[\"GET posts id in first data shound be 1 and actual is \"+ jsonData[0].id] = jsonData[0].id === 1;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://jsonplaceholder.typicode.com/posts",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
