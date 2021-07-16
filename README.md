@@ -1,17 +1,17 @@
 # การเรียนรู้
 
-08/07/2021 [Version Control](\sum-up\20210708.md)
+08/07/2021 [Version Control](sum-up/20210708.md)
 
-09/07/2021 git day 1
+09/07/2021 [git day 1](sum-up/20210709.md)
 
-10/07/2021 git day 2
+10/07/2021 [git day 2](sum-up/20210710.md)
 
 11/07/2021 dead
 
-12/07/2021 git day 3
+12/07/2021 [git day 3](sum-up/20210712.md)
 
-13/07/2021 REST API
+13/07/2021 [REST API](sum-up/20210713.md)
 
-14/07/2021 สถาปัตยกรรม Software
+14/07/2021 [สถาปัตยกรรม Software](sum-up/20210714.md)
 
-15/07/2021 การทดสอบ API
+15/07/2021 [การทดสอบ API](sum-up/20210715.md)
