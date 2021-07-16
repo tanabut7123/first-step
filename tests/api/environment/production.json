@@ -1,0 +1,16 @@
+{
+  "id": "c176b98f-cd64-aea8-b268-c3b066e30e18",
+  "name": "Production",
+  "values": [
+    {
+      "enabled": true,
+      "key": "url",
+      "value": "https://jsonplaceholder.typicode.com",
+      "type": "text"
+    }
+  ],
+  "timestamp": 1626441480520,
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2021-07-16T13:22:32.197Z",
+  "_postman_exported_using": "Postman/5.5.5"
+}

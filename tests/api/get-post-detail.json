@@ -1,36 +1,177 @@
 {
-	"variables": [],
 	"info": {
+		"_postman_id": "be43a664-67c8-48ca-8c04-b4681824f3fd",
 		"name": "get-post-detail",
-		"_postman_id": "fce25a53-b948-6388-46d6-a22fe1558455",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "GETposts",
+			"name": "GETpost1",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"type": "text/javascript",
 						"exec": [
-							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"tests[\"Status code is 200 \"+pm.environment.get(\"url\")] = responseCode.code === 200;",
 							"",
 							"var jsonData = JSON.parse(responseBody);",
 							"tests[\"GET posts 1 userId is 1\"] = jsonData.userId === 1;",
 							"tests[\"GET posts 1 title is sunt aut facere repellat provident occaecati excepturi optio reprehenderit\"] = jsonData.title === \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\";",
 							"tests[\"GET posts 1 body is quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"] = jsonData.body === \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\";"
-						]
+						],
+						"type": "text/javascript"
 					}
 				}
 			],
 			"request": {
-				"url": "https://jsonplaceholder.typicode.com/posts/1",
 				"method": "GET",
 				"header": [],
-				"body": {},
-				"description": ""
+				"url": {
+					"raw": "{{url}}/posts/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETpost2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"Status code is 200 \"+pm.environment.get(\"url\")] = responseCode.code === 200;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"GET posts 2 userId is 1\"] = jsonData.userId === 1;",
+							"tests[\"GET posts 2 title is qui est esse\"] = jsonData.title === \"qui est esse\";",
+							"tests[\"GET posts 2 body is est rerum tempore vitae\\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\\nqui aperiam non debitis possimus qui neque nisi nulla\"] = jsonData.body === \"est rerum tempore vitae\\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\\nqui aperiam non debitis possimus qui neque nisi nulla\";"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/posts/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"posts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETpost3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"Status code is 200 \"+pm.environment.get(\"url\")] = responseCode.code === 200;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"GET posts 3 userId is 1\"] = jsonData.userId === 1;",
+							"tests[\"GET posts 3 title is ea molestias quasi exercitationem repellat qui ipsa sit aut\"] = jsonData.title === \"ea molestias quasi exercitationem repellat qui ipsa sit aut\";",
+							"tests[\"GET posts 3 body is et iusto sed quo iure\\nvoluptatem occaecati omnis eligendi aut ad\\nvoluptatem doloribus vel accusantium quis pariatur\\nmolestiae porro eius odio et labore et velit aut\"] = jsonData.body === \"et iusto sed quo iure\\nvoluptatem occaecati omnis eligendi aut ad\\nvoluptatem doloribus vel accusantium quis pariatur\\nmolestiae porro eius odio et labore et velit aut\";"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/posts/3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"posts",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETpost4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"Status code is 200 \"+pm.environment.get(\"url\")] = responseCode.code === 200;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"GET posts 4 userId is 1\"] = jsonData.userId === 1;",
+							"tests[\"GET posts 4 title is eum et est occaecati\"] = jsonData.title === \"eum et est occaecati\";",
+							"tests[\"GET posts 4 body is ullam et saepe reiciendis voluptatem adipisci\\nsit amet autem assumenda provident rerum culpa\\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\\nquis sunt voluptatem rerum illo velit\"] = jsonData.body === \"ullam et saepe reiciendis voluptatem adipisci\\nsit amet autem assumenda provident rerum culpa\\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\\nquis sunt voluptatem rerum illo velit\";"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/posts/4",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"posts",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETpost5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"tests[\"Status code is 200 \"+pm.environment.get(\"url\")] = responseCode.code === 200;",
+							"",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"GET posts 5 userId is 1\"] = jsonData.userId === 1;",
+							"tests[\"GET posts 5 title is nesciunt quas odio\"] = jsonData.title === \"nesciunt quas odio\";",
+							"tests[\"GET posts 5 body is repudiandae veniam quaerat sunt sed\\nalias aut fugiat sit autem sed est\\nvoluptatem omnis possimus esse voluptatibus quis\\nest aut tenetur dolor neque\"] = jsonData.body === \"repudiandae veniam quaerat sunt sed\\nalias aut fugiat sit autem sed est\\nvoluptatem omnis possimus esse voluptatibus quis\\nest aut tenetur dolor neque\";"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/posts/5",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"posts",
+						"5"
+					]
+				}
 			},
 			"response": []
 		}
