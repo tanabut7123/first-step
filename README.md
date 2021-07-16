@@ -1,6 +1,6 @@
 # การเรียนรู้
 
-08/07/2021 [Version Control](.\\sum-up\20210708.md)
+08/07/2021 [Version Control](\sum-up\20210708.md)
 
 09/07/2021 git day 1
 
